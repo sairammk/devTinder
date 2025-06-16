@@ -1,7 +1,7 @@
 const bcrypt = require("bcrypt");
 const validator = require("validator");
 const User = require("../models/user");
-const { validateSignupData } = require('../utils/validation')
+const { validateSignupData } = require("../utils/validation");
 
 const signup = async (req, res) => {
   // Validation of data
@@ -68,7 +68,18 @@ const login = async (req, res) => {
   }
 };
 
+const logout = async (req, res) => {
+  res.cookie("token", null, {
+    expires: new Date(Date.now()),
+  });
+  res.status(200).json({
+    status: "success",
+    message: "Logged out successfully",
+  });
+};
+
 module.exports = {
   signup,
   login,
+  logout,
 };

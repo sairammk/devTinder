@@ -5,11 +5,12 @@ const { connectDB } = require("./src/config/database");
 const authRouter = require("./src/routes/auth");
 const profileRouter = require("./src/routes/profile");
 const requestRouter = require("./src/routes/request");
+const userRouter = require("./src/routes/user");
 
 app.use(express.json());
 app.use(cookieParser());
 
-app.use("/", authRouter, profileRouter, requestRouter);
+app.use("/", authRouter, profileRouter, requestRouter, userRouter);
 
 // app.get("/user", async (req, res) => {
 //   const user = await User.find({ email: req.body.email });

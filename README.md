@@ -12,11 +12,11 @@ app.use("/", (req, res) => {
 
  -->
 
-<!-- 
+<!--
 - ORDER OF THE ROUTES MATTER A LOT.
 - Explore routing and use ?, +, (), \* in the routes and use of regex.
 - Reading queryParams and dynamic routes
-- Should not use next at last route handler function as it throws error stating it need next route handler 
+- Should not use next at last route handler function as it throws error stating it need next route handler
 -->
 
 <!--
@@ -104,6 +104,21 @@ app.get("/user/:userId", (req, res) => {
 // Set the expiry of jwt and cookies to 7 days
  -->
 
-<!-- 
+<!-- LOGICAL DB QUERY AND COMPOUND INDEXES
 // Explore Tinder API
+// Create logout API
+// Create PATCH /profile/edit API
+// Create PATCH /profile/password API
+// query in mongoose: $or, $and and more about logical queries
+// Schema.pre('save') function
+// Why do we need an index in DB
+// Read about compound indexes and indexes in mongodb
+// Read about why more indexes should not be used
+// ALWAYS THINK ABOUT CORNOR CASE
+ -->
+
+<!-- REF, POPULATE & THOUGHT PROCESS OF WRITING API'S
+// Thought process - POST vs. GET
+// REF, POPULATE and read this blog: https://mongoosejs.com/docs/populate.html
+// Create  GET user/requests/received with all checks
  -->
